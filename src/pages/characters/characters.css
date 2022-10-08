@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+:root {
+    --color-font: #000;
+    --color-font-hover: #FFFFFF;
+    --background: #E9E9E9;
+    --sidebar-background: #3c748b;
+    --btn-hover-background: #F09228;
+    --font-titulos: 'Marcellus SC', serif;
+}
+
+section > h4 {
+    margin: 4vh auto;
+    color: var(--sidebar-background);
+}
+
+.btn-films {
+    text-align: center;
+    margin: 1vh 1vw;
+}
+
+.btn-film {
+    background-color: var(--sidebar-background);
+    margin: 1vh 1vw;
+    border: none;
+    padding: 0.5vh 1vw;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-family: var(--font-titulos);
+    font-weight: 500;
+}
+
+.btn-film:hover {
+    background-color: var(--btn-hover-background);
+    color: var(--color-font);
+}

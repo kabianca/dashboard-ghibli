@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import "../pages/movies/movies.css";
+@import "../pages/characters/characters.css";
+@import "../pages/locations_vehicles/locations_vehicles.css";
+@import "../pages/data/data-analysis.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+:root {
+    --color-font: #000;
+    --color-font-hover: #FFFFFF;
+    --color-font-highlight: #009688;
+    --color-font-gray: gray;
+    --background: #ececec;
+    --sidebar-background: #3c748b;
+    --btn-hover-background: #F09228;
+    --font-titulos: 'Marcellus SC', serif;
+}
+
+body {
+    background-color: var(--background);
+    max-width: 85vw;
+    max-height: 100vh;
+    color: #000;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--sidebar-background);
+    position: fixed;
+    float: left;
+    width: 15vw;
+    height: 100vh;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+#root {
+    float: right;
+    width: 68vw;
+    margin: 7vh 0;
+}
+
+#logo-ghibli {
+    width: 13vw;
+    margin-top: 2vh;
+}
+
+#sidebar > h4 {
+    margin: 4vh 0;
+    font-size: 1.8rem;
+    font-family: var(--font-titulos);
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.btn_lateral {
+    display: block;
+    width: 15vw;
+    border: none;
+    padding: 2vh 0;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+    color: var(--color-font);
+}
+
+.btn_lateral:hover,
+#btn_lateral_about:hover {
+    background-color: var(--btn-hover-background);
+    color: var(--color-font);
+}
+
+#totoro {
+    bottom: 0;
+    width: 10vw;
+}
+
+section > h1 {
+    margin: 1vh 0;
+    color: var(--color-font-hover);
+    font-family: var(--font-titulos);
+    font-size: 3rem;
+    font-weight: 400;
+    text-shadow: 0 0 4px var(--color-font);
+}
+
+.container > p {
+    font-size: 1.3rem;
+    margin: 20vh 0;
+}
+
