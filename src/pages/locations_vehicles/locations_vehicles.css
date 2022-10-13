@@ -2,119 +2,207 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-}
-
-:root {
-    --color-font: #000;
-    --color-font-hover: #FFFFFF;
-    --background: #E9E9E9;
-    --sidebar-background: #3c748b;
-    --font-titulos: 'Marcellus SC', serif;
+    text-align: center;
 }
 
 .btn-locations,
 .btn-vehicles {
-  background-color: var(--sidebar-background);
-  margin: 4vw;
-  border: none;
-  padding: 0.5vw 2vw;
-  width: 20%;
-  cursor: pointer;
-  color: var(--color-font-hover);
-  font-size: 1rem;
-  font-weight: 600;
+    background-color: var(--sidebar-background);
+    margin: 4vw;
+    border: none;
+    padding: 0.5vw 2vw;
+    width: 20%;
+    cursor: pointer;
+    color: var(--color-font-hover);
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .btn-locations:hover,
 .btn-vehicles:hover {
-  background-color: var(--sidebar-background);
-  color: var(--color-font);
-}
-
-
-.catalogue {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 15px;
-    column-gap: 5px;
-    width: 60vw;
-}
-
-.card-locveh {
-    background-color: var(--color-font-hover);
-    flex: 0 1 auto;
-    padding: 1vh 1vw;
-    width: 20%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.btn-modal {
-    background: none;
-    border: none;
-    width: 12vw;
-    height: 18vw;
-    cursor: pointer;
-}
-
-.card-img-locveh {
-    max-height: 15vh;
-    max-width: 15vw;
-    object-fit: contain;
-}
-
-.card-txt-locveh {
-    padding: 1vh 0;
-    font-size: 0.8rem;
-}
-
-.modal {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    display: none;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-.modal-content {
-    background-color: var(--sidebar-background);
-    margin: 7vh 20vw;
-    padding: 2vw 4vw 2.5vw;
-    min-width: 60vw;
-    min-height: 45vh;
-    color: var(--color-font-hover);
-    font-size: 1.25rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-.modal-director {
-    margin: 1vh 1vw;
-}
-
-.modal-score-duration {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: -1vw -5vw 1vw;
-}
-
-.close {
-    background-color: var(--sidebar-background);
-    margin-top: 3vw;
-    border: 1px solid var(--color-font);
-    padding: 0.5vw 2vw;
-    border-radius: 0.5vw;
-    cursor: pointer;
+    background-color: var(--btn-hover-background);
     color: var(--color-font);
-    font-size: 1.2rem;
-    font-weight: 600;
 }
 
-.close:hover {
-    background-color: var(--color-font-hover);
-    color: var(--sidebar-background);
+
+.catalogue-local-vehicles {
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    column-gap: 1vw;
+    row-gap: 1vw;
+    justify-content: center;
+    height: 45vh;
+    padding: 2vh 2vw;
+}
+
+.card {
+    padding: 1%;
+}
+
+.card-img-cut {
+    width: 15vw;
+    height: 11vh;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-txt {
+    padding: 1vh 0;
+    font-size: 1.2rem;
+}
+
+.back-top {
+    margin: 5%;
+}
+
+.back-top a {
+    text-decoration: none;
+    color: var(--color-font);
+    font-size: 1.3rem;
+}
+
+.back-top a:hover {
+    text-shadow: 4px 4px 4px var(--background-items);
+}
+
+footer {
+    background-color: var(--background-items);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 5vw;
+    align-items: center;
+    max-width: 100%;
+    bottom: 0;
+    color: var(--color-font);
+    font-size: 1rem;
+}
+
+.img-logo-ghibli,
+.img-totoro {
+    width: 180px;
+}
+
+.links {
+    text-decoration: none;
+    color: var(--color-font);
+}
+
+.links:hover {
+    text-shadow: 3px 3px 3px black;
+}
+
+@media only screen and (max-width: 800px) {
+    .top h1 {
+        margin: -8vw 0 0;
+        font-size: 2.5vh;
+    }
+
+    .navbar {
+        padding: 6vw 0 2vw 50vw;
+    }
+
+    .navbar a {
+        font-size: 0.8rem;
+    }
+
+    /* .navbar a.icon {
+          float: right;
+          display: block;
+        } */
+
+    .btn-locations,
+    .btn-vehicles {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        min-height: 130vw;
+    }
+
+    .catalogue {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-img-cut {
+        width: 22vw;
+        height: 16vw;
+    }
+
+    .card-txt {
+        font-size: 1rem;
+    }
+
+    .back-top {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    .logo-ghibli,
+    .totoro {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .top h1 {
+        margin: -9vw 0 0;
+        font-size: 2.5vh;
+    }
+
+    .navbar {
+        padding: 6vw 0 2vw 40vw;
+    }
+
+    .navbar a {
+        font-size: 0.6rem;
+    }
+
+    /* .navbar a.icon {
+          float: right;
+          display: block;
+        } */
+
+    .btn-locations,
+    .btn-vehicles {
+        font-size: 0.6rem;
+    }
+
+    .container {
+        min-height: 130vw;
+    }
+
+    .catalogue {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-img-cut {
+        width: 35vw;
+        height: 25vw;
+    }
+
+    .card-txt {
+        font-size: 0.6rem;
+    }
+
+    .back-top a {
+        font-size: 0.7rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+
+    .img-logo-ghibli,
+    .img-totoro {
+        width: 80px;
+    }
 }

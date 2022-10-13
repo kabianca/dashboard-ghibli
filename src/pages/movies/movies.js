@@ -11,9 +11,9 @@ export default () => {
             <hr>
             <form class="btn-catalogue">
                 <select id="order-by" name="order" class="btn-catalogue-filter">
-                    <option name="order" value="order" selected>Ordenar por</option>
-                    <option name="order" value="rt_score">Avaliação (Z-A)</option>
-                    <option name="order" value="release_date">Ano de Lançamento</option>
+                    <option name="order" value="order" selected>Order by</option>
+                    <option name="order" value="rt_score">Best Ratings</option>
+                    <option name="order" value="release_date">Release Date (Descending)</option>
                 </select>
             </form>
             <div class="modal"></div>
@@ -35,7 +35,7 @@ export default () => {
                 </button>
                 <div class="card-txt">
                 <h4>${film.title}</h4>
-                <p>(${film.release_date})</p>
+                <p>${film.release_date} | ${film.rt_score }<i class="fa-regular fa-star"></i></p>
                 </div>
             </div>
             `;

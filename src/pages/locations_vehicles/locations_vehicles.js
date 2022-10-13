@@ -13,11 +13,11 @@ export default () => {
                 <button class="btn-locations">Locations</button>
             </form>
         </section>
-        <div class="catalogue"></div>
+        <div class="catalogue-local-vehicles"></div>
     `
 
     const films = data.films;
-    const catalogue = container.querySelector('.catalogue');
+    const catalogue = container.querySelector('.catalogue-local-vehicles');
     const btnLocations = container.querySelector('.btn-locations');
     const btnVehicles = container.querySelector('.btn-vehicles');
     const vehiclesInfos = printCatalogueVehicles(films);

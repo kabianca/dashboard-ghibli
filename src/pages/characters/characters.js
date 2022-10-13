@@ -9,13 +9,13 @@ export default () => {
     <section>
         <h1>Characters</h1>
         <hr>
-        <h4>Selecione um filme para conhecer todos os seus personagens!</h4>
+        <h4>Choose a movie to get to know your characters!</h4>
         <form id="buttons" class="btn-films"></form>
     </section>
-    <div class="catalogue-people"></div>
+    <div class="catalogue-characters"></div>
     `
     const films = data.films;
-    const cataloguePeople = container.querySelector('.catalogue-people');
+    const cataloguePeople = container.querySelector('.catalogue-characters');
     const btnForm = container.querySelector('#buttons');
 
     function printButtons(films) {

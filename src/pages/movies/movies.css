@@ -1,19 +1,11 @@
 * {
     box-sizing: border-box;
+    text-align: center;
     margin: 0 auto;
     padding: 0;
 }
 
-:root {
-    --color-font: #000;
-    --color-font-hover: #FFFFFF;
-    --background: #E9E9E9;
-    --sidebar-background: #3c748b;
-    --font-titulos: 'Marcellus SC', serif;
-}
-
 .btn-catalogue {
-    text-align: center;
     margin: 2vh 0;
 }
 
@@ -27,21 +19,27 @@
 }
 
 .catalogue-films {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    column-gap: 1vw;
+    row-gap: 1vw;
     justify-content: center;
-    row-gap: 15px;
-    column-gap: 10px;
-    width: 60vw;
+    height: 65vh;
+    padding: 2vh 2vw;
 }
 
 .card {
-    background-color: var(--color-font-hover);
-    flex: 0 1 auto;
-    padding: 1vh 1vw;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
+    padding: 1vw;
+}
+
+.card-txt>h4 {
+    font-size: 0.9rem;
+}
+
+.card-txt>p {
+    font-size: 0.8rem;
 }
 
 .btn-modal {
@@ -59,8 +57,8 @@
 }
 
 .card-txt {
-    padding: 1vh 0;
-    font-size: 0.8rem;
+    padding: 1vw 0;
+    font-size: 1.2rem;
 }
 
 .modal {
@@ -69,24 +67,24 @@
     display: none;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .modal-content {
-    background-color: var(--sidebar-background);
-    margin: 7vh 20vw;
+    background-color: var(--color-modal);
+    margin: 7% 20%;
     padding: 2vw 4vw 2.5vw;
-    min-width: 60vw;
-    min-height: 45vh;
-    color: var(--color-font-hover);
+    min-width: 60%;
+    min-height: 45%;
+    color: var(--color-font);
     font-size: 1.25rem;
     font-weight: 400;
     text-align: center;
 }
 
 .modal-director {
-    margin: 1vh 1vw;
+    margin: 1vw;
 }
 
 .modal-score-duration {
@@ -96,10 +94,11 @@
 }
 
 .close {
-    background-color: var(--sidebar-background);
+    background-color: var(--color-modal);
     margin-top: 3vw;
     border: 1px solid var(--color-font);
     padding: 0.5vw 2vw;
+    border-radius: 0.5vw;
     cursor: pointer;
     color: var(--color-font);
     font-size: 1.2rem;
@@ -107,6 +106,173 @@
 }
 
 .close:hover {
-    background-color: var(--color-font-hover);
-    color: var(--sidebar-background);
+    background-color: var(--color-font);
+    color: var(--color-modal);
+}
+
+.back-top {
+    margin: 5%;
+}
+
+.back-top a {
+    text-decoration: none;
+    color: var(--color-font);
+    font-size: 1.3rem;
+}
+
+.back-top a:hover {
+    text-shadow: 4px 4px 4px var(--background-items);
+}
+
+@media only screen and (max-width: 800px) {
+    .top h1 {
+        margin: -10vw 0 0;
+        font-size: 3.5vh;
+    }
+
+    .navbar {
+        padding: 6vw 0 2vw 50vw;
+    }
+
+    .navbar a {
+        font-size: 0.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        padding: 0 0 1vw 25vw;
+    }
+
+    .container {
+        min-height: 130vw;
+    }
+
+    .btn-catalogue-filter {
+        font-size: 0.8rem;
+    }
+
+    .catalogue {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .btn-modal {
+        width: 15vw;
+        height: 22vw;
+    }
+
+    .card-txt {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        margin: 35% 20%;
+        padding: 2vw 4vw 2.5vw;
+        min-height: 25%;
+        font-size: 0.85rem;
+    }
+
+    .modal-director {
+        margin: 1vw;
+    }
+
+    .modal-score-duration {
+        margin: 1vw -5vw;
+    }
+
+    .close {
+        font-size: 0.8rem;
+    }
+
+    .back-top {
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        font-size: 0.7rem;
+    }
+
+    .logo-ghibli,
+    .totoro {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        background-position: -1vw 10vw;
+    }
+
+    .top h1 {
+        margin: -12vw 0 0;
+        font-size: 2.5vh;
+    }
+
+    .navbar {
+        padding: 7vw 0 2vw 42vw;
+    }
+
+    .navbar a {
+        font-size: 0.6rem;
+    }
+
+    .description {
+        font-size: 0.65rem;
+        margin: 1vw -5vw 2vw 0;
+        padding: 0 0 0 18vw;
+    }
+
+    .container {
+        min-height: 130vw;
+    }
+
+    .btn-catalogue-filter {
+        font-size: 0.4rem;
+    }
+
+    .catalogue {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 2.2vw -2vw;
+    }
+
+    .btn-modal {
+        width: 25vw;
+        height: 37vw;
+    }
+
+    .card-txt {
+        font-size: 0.8rem;
+    }
+
+    .modal-content {
+        margin: 30% 10%;
+        padding: 2vw 4vw 4vw;
+        min-height: 15%;
+        font-size: 0.6rem;
+    }
+
+    .modal-director {
+        margin: 1vw 0;
+    }
+
+    .modal-score-duration {
+        margin: 2vw -3vw 3vw;
+    }
+
+    .close {
+        font-size: 0.6rem;
+    }
+
+    .back-top a {
+        font-size: 0.7rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
+    }
+
+    .img-logo-ghibli,
+    .img-totoro {
+        width: 80px;
+    }
+
 }
