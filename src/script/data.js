@@ -1,10 +1,15 @@
 export const ghibli = {
-  sortedFilms,
   countFilms,
   countLocations,
   countPeople,
   countVehicles,
-  filmPeople,
+  extractDirector,
+  extractListFilms,
+  extractListSpecies,
+  filterPeople,
+  filterDirector,
+  filterSpecie,
+  sortedFilms,
 };
 
 function sortedFilms(films, selection) {
@@ -19,6 +24,45 @@ function sortedFilms(films, selection) {
     }
   });
   return sorted;
+}
+
+function filterDirector(films, selection) {
+  const filmsDirector = films.filter((film) => film.director === selection)
+      return filmsDirector;
+};
+
+function filterPeople(films, selection) {
+  const filmsPeople = films.filter((film) => film.title === selection);
+  return filmsPeople;
+}
+
+function filterSpecie(films, selection) {
+  let specieTotal = [];
+  films.filter((film) => {
+      const specie = film.people.filter((person) => person.specie === selection);
+      specieTotal.push(...specie);
+  });
+  return specieTotal;
+}
+
+
+function extractDirector(films) {
+  const director = films.map((film) => film.director);
+  return new Set(director);
+}
+
+function extractListFilms(films) {
+  const title = films.map((film) => film.title);
+  return new Set(title);
+}
+
+function extractListSpecies(films) {
+  const specieTotal = [];
+  films.map((film) => {
+      const specie = film.people.map((person) => person.specie);
+      specieTotal.push(...specie);
+  });
+  return new Set(specieTotal);
 }
 
 function countFilms(films) {
@@ -50,13 +94,4 @@ function countVehicles(films) {
   count.join('')
   const sum = count.reduce((a, b) => a + b, 0);
   return sum;
-}
-
-function filmPeople(films, btn) {
-  const filmSelected = films.filter((film) => {
-    if (btn === film.title) {
-      return film.people;
-    }
-  })
-  return filmSelected;
 }

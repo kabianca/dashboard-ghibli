@@ -124,7 +124,7 @@
     text-shadow: 4px 4px 4px var(--background-items);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 815px) {
     .top h1 {
         margin: -10vw 0 0;
         font-size: 3.5vh;
@@ -152,7 +152,7 @@
     }
 
     .catalogue {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .btn-modal {
@@ -230,7 +230,7 @@
     }
 
     .catalogue {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         margin: 2.2vw -2vw;
     }
 

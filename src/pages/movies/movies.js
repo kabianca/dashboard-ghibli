@@ -1,5 +1,5 @@
-import {ghibli} from '../../script/data.js';
 import data from '../../data/ghibli/ghibli.js';
+import { ghibli } from '../../script/data.js';
 
 export default () => {
     const container = document.createElement("div");
@@ -11,20 +11,28 @@ export default () => {
             <hr>
             <form class="btn-catalogue">
                 <select id="order-by" name="order" class="btn-catalogue-filter">
-                    <option name="order" value="order" selected>Order by</option>
+                    <option name="order" value="default" selected>Order by</option>
                     <option name="order" value="rt_score">Best Ratings</option>
                     <option name="order" value="release_date">Release Date (Descending)</option>
+                </select>
+                <select id="director" class="btn-catalogue-filter">
+                    <option value="default">Director</option>
                 </select>
             </form>
             <div class="modal"></div>
             <div class="catalogue-films"></div>
         </section> 
     `
-
     const films = data.films;
     const modal = container.querySelector('.modal');
-    // const btnFilterDuration = container.querySelector('#filter-duration');
+    const btnDirector = container.querySelector('#director');
     const btnOrderFilms = container.querySelector('#order-by');
+
+    function printButtonsDirectors(extractDirector) {
+        return [...extractDirector].map(director => `<option value="${director}">${director}</option>`).join('');
+    }
+
+    btnDirector.innerHTML += printButtonsDirectors(ghibli.extractDirector(films));
 
     function printCatalogue(filmsList) {
         const arrayFilms = filmsList.map((film) => {
@@ -93,11 +101,11 @@ export default () => {
         }
     }
 
-    // btnFilterDuration.addEventListener ('change', () => {
-    //     const selected = (btnFilterDuration).value;
-    //     const filterDuration = ghibli.filterDuration(films, selected);
-    //     printCards(filterDuration);
-    // });
+    btnDirector.addEventListener ('change', () => {
+        const selected = btnDirector.value;
+        const filterDirection = ghibli.filterDirector(films, selected);
+        printCards(filterDirection);
+    });
 
     btnOrderFilms.addEventListener('change', () => {
         let selection = btnOrderFilms.value;

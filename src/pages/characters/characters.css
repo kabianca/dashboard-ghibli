@@ -15,7 +15,7 @@
 
 section>h4 {
     margin: 4vh auto;
-    color: var(--sidebar-background);
+    color: var(--color-font-hover);
 }
 
 .btn-films {
@@ -47,13 +47,13 @@ section>h4 {
     column-gap: 1vw;
     row-gap: 1vh;
     justify-content: center;
-    height: 45vh;
+    height: 550px;
     padding: 2vh 2vw;
 }
 
 .card-img-cut {
-    width: 15vw;
-    height: 11vh;
+    width: 150;
+    height: 40vh;
 }
 
 .card-img {
