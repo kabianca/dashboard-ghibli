@@ -87,11 +87,13 @@ li {
     color: var(--color-font);
 }
 
-.card {
+/* .card {
     background-color: var(--backgrounds-cards);
     box-shadow: var(--shadow);
-    padding: 1vw;
-}
+    padding: 2vh 1vw 20vh 1vw;
+    max-width: 170px;
+    max-height: 400px;
+} */
 
 #totoro {
     bottom: 0;

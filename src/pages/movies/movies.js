@@ -37,7 +37,7 @@ export default () => {
     function printCatalogue(filmsList) {
         const arrayFilms = filmsList.map((film) => {
             const template = `
-            <div class="card">
+            <div class="card-movie">
                 <button class= "btn-modal" type="button"> 
                     <img class="card-img" src="${film.poster}" alt="${film.title}" name="${film.title}" > 
                 </button>

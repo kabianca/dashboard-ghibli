@@ -38,16 +38,12 @@ export default () => {
         const arrayPeople = films.map((film) => {
             const people = film.people.map((person) => {
             const templatePerson = `
-                <div class="card">
-                    <div class="card-img-cut">
-                        <img class="card-img" src="${person.img}" alt="${person.name}" name="${person.name}" >
-                    </div>
-                    <div class="card-txt">
-                        <h4>${person.name}</h4>
-                        <p>Gender: ${person.gender}</p>
-                        <p>Age: ${person.age}</p>
-                        <p>Specie: ${person.specie}</p>
-                    </div> 
+                <div class="card-characters">
+                    <img class="card-img" src="${person.img}" alt="${person.name}" name="${person.name}" >
+                    <h4>${person.name}</h4>
+                    <p>Gender: ${person.gender}</p>
+                    <p>Age: ${person.age}</p>
+                    <p>Specie: ${person.specie}</p>
                 </div>
                 `;
             return templatePerson;
@@ -60,16 +56,12 @@ export default () => {
     function printFilterSpecie(specieCharacters) {
         const arrayPeople = specieCharacters.map((person) => {
             const templatePerson = `
-                <div class="card">
-                    <div class="card-img-cut">
+                <div class="card-characters">
                     <img class="card-img" src="${person.img}" alt="${person.name}" name="${person.name}" >
-                    </div>
-                    <div class="card-txt">
                     <h4>${person.name}</h4>
                     <p>Gender: ${person.gender}</p>
                     <p>Age: ${person.age}</p>
                     <p>Specie: ${person.specie}</p>
-                    </div> 
                 </div>
                 `;
             return templatePerson;

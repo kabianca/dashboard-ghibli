@@ -3,7 +3,7 @@ import data from '../../data/ghibli/ghibli.js';
 export default () => {
     const container = document.createElement("div");
     container.classList.add("container");
-    
+
     container.innerHTML = `
         <section>
             <h1>Veículos e Locais</h1>
@@ -26,43 +26,35 @@ export default () => {
 
     function printCatalogueLocations(films) {
         const arrayLocations = films.map((film) => {
-        const locations = film.locations.map((location) => {
-        const templateLocations = `
-                <div class="card-locveh">
-                <div class="card-img-cut-locveh">
+            const locations = film.locations.map((location) => {
+                const templateLocations = `
+                <div class="card-vehloc">
                     <img class="card-img-locveh" src="${location.img}" alt="${location.name}" name="${location.name}"></button>
-                </div>
-                <div class="card-txt">
                     <h4>${film.title}</h4>
                     <p>${location.name}</p>
                 </div>
-                </div>
                 `;
-        return templateLocations;
-        });
-        return locations.join('');
+                return templateLocations;
+            });
+            return locations.join('');
         })
         return arrayLocations.join('');
     }
 
     function printCatalogueVehicles(films) {
         const arrayVehicles = films.map((film) => {
-        const vehicles = film.vehicles.map((vehicle) => {
-        const templateVehicles = `
-                <div class="card">
-                    <div class="card-img-cut">
-                    <img class="card-img" src="${vehicle.img}" alt="${vehicle.name}" name="${vehicle.name}"> </button>
-                </div>
-                <div class="card-txt">
+            const vehicles = film.vehicles.map((vehicle) => {
+                const templateVehicles = `
+                <div class="card-vehloc">
+                    <img class="card-img-locveh" src="${vehicle.img}" alt="${vehicle.name}" name="${vehicle.name}"> </button>
                     <h4>${film.title}</h4>
                     <p>${vehicle.name}<p>
                     <p>${vehicle.vehicle_class}<p>
                 </div>
-                </div>
                 `;
-        return templateVehicles;
-        });
-        return vehicles.join('');
+                return templateVehicles;
+            });
+            return vehicles.join('');
         })
         return arrayVehicles.join('');
     }
@@ -70,11 +62,11 @@ export default () => {
     catalogue.innerHTML = locationsVehicles;
 
     btnLocations.addEventListener('click', () => {
-    catalogue.innerHTML = printCatalogueLocations(films);
+        catalogue.innerHTML = printCatalogueLocations(films);
     })
 
     btnVehicles.addEventListener('click', () => {
-    catalogue.innerHTML = printCatalogueVehicles(films);
+        catalogue.innerHTML = printCatalogueVehicles(films);
     });
     return container;
 }

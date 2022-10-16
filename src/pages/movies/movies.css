@@ -26,12 +26,16 @@
     column-gap: 1vw;
     row-gap: 1vw;
     justify-content: center;
-    height: 65vh;
+    height: 600px;
     padding: 2vh 2vw;
 }
 
-.card {
-    padding: 1vw;
+.card-movie {
+    background-color: var(--backgrounds-cards);
+    box-shadow: var(--shadow);
+    padding: 2vh 1vw 1vh 1vw;
+    max-width: 300px;
+    max-height: 500px;
 }
 
 .card-txt>h4 {
