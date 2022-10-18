@@ -59,28 +59,7 @@ section>h4 {
     max-height: 400px;
 }
 
-@media only screen and (max-width: 800px) {
-    .top h1 {
-        margin: -10vw 0 0;
-        font-size: 3.5vh;
-    }
-
-    .navbar {
-        padding: 6vw 0 2vw 35vw;
-    }
-
-    .navbar a {
-        font-size: 0.8rem;
-    }
-
-    .description {
-        font-size: 1.4rem;
-    }
-
-    .container {
-        min-height: 130vw;
-    }
-
+@media only screen and (max-width: 815px) {
     .btn-films {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -90,52 +69,12 @@ section>h4 {
         font-size: 0.9rem;
     }
 
-    .catalogue {
+    .catalogue-characters {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .card-img-cut {
-        width: 22vw;
-        height: 22vw;
-    }
-
-    .card-txt {
-        font-size: 1rem;
-    }
-
-    .back-top {
-        font-size: 0.8rem;
-    }
-
-    footer {
-        font-size: 0.7rem;
-    }
-
-    .logo-ghibli,
-    .totoro {
-        width: 100px;
     }
 }
 
 @media only screen and (max-width: 420px) {
-    .top h1 {
-        margin: -11vw 0 0;
-        font-size: 2.5vh;
-    }
-
-    .navbar {
-        padding: 6vw 0 2vw 30vw;
-    }
-
-    .navbar a {
-        font-size: 0.6rem;
-    }
-
-    .description {
-        padding: 2vw;
-        font-size: 1rem;
-    }
-
     .btn-films {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -145,30 +84,8 @@ section>h4 {
         font-size: 0.8rem;
     }
 
-    .catalogue {
+    .catalogue-characters {
         grid-template-columns: repeat(2, 1fr);
         margin: 10vw 5vw;
-    }
-
-    .card-img-cut {
-        width: 35vw;
-        height: 55vw;
-    }
-
-    .card-txt {
-        font-size: 0.8rem;
-    }
-
-    .back-top a {
-        font-size: 0.7rem;
-    }
-
-    footer {
-        font-size: 0.6rem;
-    }
-
-    .img-logo-ghibli,
-    .img-totoro {
-        width: 80px;
     }
 }

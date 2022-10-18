@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 @import "../pages/movies/movies.css";
 @import "../pages/characters/characters.css";
-@import "../pages/locations_vehicles/locations_vehicles.css";
-@import "../pages/data/data-analysis.css";
+@import "../pages/locations_vehicles/locationsVehicles.css";
+@import "../pages/data/dataAnalysis.css";
 
 * {
     box-sizing: border-box;
