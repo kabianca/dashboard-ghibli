@@ -23,7 +23,6 @@
 * [6. Estrutura de apresentação](#6-estrutura-de-apresentação)
 * [7. Checklist](#7-checklist)
 
-***
 ## **1. Apresentação**
 
 Projeto construido ao longo do Bootcamp de Desenvolvimento Web e UX Design da [Laboratória](https://hub.laboratoria.la/br/10-coisas-que-voce-precisa-saber-sobre-o-bootcamp). Este projeto apresenta o universo dos Studio Ghibli a partir de 20 longas, suas sinopses, informação de personagens, locais e veículos únicos. Na página é possível filtrar os filmes por direção, ordená-los por ano de produção e nota de avaliação, que possibilitará uma visão geral dos filmes que possuem uma maior aceitação pelo público. Além de filtrar personagens por filme e por espécie. Ao final também é possível verificar um dashboard com alguns gráficos pontuais sobre as espécies existentes nesse universo e ritmo de produção ao longo dos anos.
@@ -85,12 +84,9 @@ filtros e remodelar a disposição dos elementos no estilho de relatório de dat
 
 Features/características extra utilizadas:
 
-* Adicione à sua interface visualização de dados em forma de gráficos. Para
-  isso, recomendamos explorar bibliotecas de gráficos como
-  [Plot.ly](https://plotly.com/javascript/).
+* Visualização de dados em forma de gráficos com a bilioteca
+[Plot.ly](https://plotly.com/javascript/) e [Word Cloud](https://www.jasondavies.com/wordcloud/).
 * 100% de cobertura nos testes.
-
-***
 
 ## **6. Estrutura de apresentação**
 
