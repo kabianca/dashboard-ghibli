@@ -78,22 +78,16 @@ O primeiro passo foi entender como os nossos dados estavam estruturados, neste c
 
 ![Prototipos de alta fidelidade](prototipos-alta-fidelidade.png)
 
-## **5. Hacker edition**
+## **5. Refatoração**
 
-As seções chamadas _Hacker Edition_ são **opcionais**. Se já tiver terminado
-todos os requisitos anteriores e tiver tempo, pode tentar completá-las. Dessa
-forma, você pode aprofundar e/ou exercitar mais os objetivos de aprendizagem
-deste projeto.
+Após a conclusão das etapas obrigatórias do projeto, optei por adaptar o tema, inserir novos
+filtros e remodelar a disposição dos elementos no estilho de relatório de data analytics.
 
-Features/características extra sugeridas:
+Features/características extra utilizadas:
 
-* Ao invés de consumir dados estáticos do repositório, pode fazer isso de forma
-  dinâmica, carregando um arquivo JSON com `fetch`. A pasta `src/data` contém
-  uma versão `.js` e uma `.json` de cada conjunto de dados.
 * Adicione à sua interface visualização de dados em forma de gráficos. Para
   isso, recomendamos explorar bibliotecas de gráficos como
-  [Chart.js](https://www.chartjs.org/) ou [Google
-  Charts](https://developers.google.com/chart/).
+  [Plot.ly](https://plotly.com/javascript/).
 * 100% de cobertura nos testes.
 
 ***
