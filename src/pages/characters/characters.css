@@ -36,7 +36,7 @@ section>h4 {
 }
 
 .btn-film:hover {
-    background-color: var(--btn-hover-background);
+    background-color: var(--sidebar-background);
     color: var(--color-font);
 }
 

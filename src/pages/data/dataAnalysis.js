@@ -11,28 +11,23 @@ export default () => {
     </section>
     <table class="columns">
       <tr>
-        <td><div id="myPlotSpecie" style="width:100%;max-width:500px"></div></td>
-        <td><div id="myPlotGender" style="width:100%;max-width:500px"></div></td>
+        <td><p id="title-word-cloud">Character Gender Overview</p></td>
+        <td><p id="title-word-cloud">Species of the Ghibli Universe</p></td>
+      </tr>
+      <tr>
+        <td><div id="myPlotGender" style="width:100%;max-width:700px"></div></td>
+        <td><img src="../../assets/wordcloud.png" alt="Species of the Ghibli Universe" style="width:100%;max-width:700px"></td>
       </tr>
     </table>
+    <div id="description">
+      <p id="left">Studio Ghibli produces approximately <strong id="data">1 movie every 2 years</strong>, with the exception of the years
+      1988 and 2013 responsible for the release of 2 movies each.</p>
+      <p id="right"><strong id="data">40% of the movies </strong> in the Ghibli Universe are populated mostly by characters of the human species. The other
+      species with greater numbers assume the main role in some production.</p>
+    </div>
     `;
 
   const { films } = ghibli;
-
-  function listSpecie(obj) {
-    const specieTotal = [];
-    obj.map((film) => {
-      const specie = film.people.map((person) => person.specie);
-      return specieTotal.push(...specie);
-    });
-    return specieTotal;
-  }
-
-  const arraySpecie = listSpecie(films);
-  const countSpecie = {};
-  arraySpecie.forEach((element) => {
-    countSpecie[element] = (countSpecie[element] || 0) + 1;
-  });
 
   // gênero dos personagens
   function listGender(obj) {
@@ -50,23 +45,11 @@ export default () => {
     countGender[element] = (countGender[element] || 0) + 1;
   });
 
-  // Ritmo de produção
-  function listYear(obj) {
-    const yearTotal = [];
-    const year = obj.map((film) => film.release_date);
-    yearTotal.push(...year);
-    return yearTotal;
-  }
-
-  const arrayYear = listYear(films);
-  const countYear = {};
-  arrayYear.forEach((element) => {
-    countYear[element] = (countYear[element] || 0) + 1;
-  });
-
   // Column chart
-  const xArray = Object.keys(countSpecie);
-  const yArray = Object.values(countSpecie);
+  const myPlot = container.querySelector('#myPlotGender');
+  const xArray = Object.keys(countGender);
+  const yArray = Object.values(countGender);
+  const config = { responsive: true };
 
   const data = [{
     x: xArray,
@@ -77,21 +60,17 @@ export default () => {
     },
   }];
 
-  const layout = { title: 'Species of the Ghibli Universe' };
-  const myPlot = container.querySelector('#myPlotSpecie');
+  const layout = {
+    // title: 'Character Gender Overview',
+    plot_bgcolor: '#272727',
+    paper_bgcolor: '#272727',
+    font: {
+      color: '#FFFFFF',
+      family: 'serif',
+    },
+  };
 
-  Plotly.newPlot(myPlot, data, layout, {responsive: true});//eslint-disable-line
-
-  // Pie chart
-  const dataGender = [{
-    values: Object.values(countGender),
-    labels: Object.keys(countGender),
-    type: 'pie',
-  }];
-
-  const layoutGender = { title: 'Character Gender Overview' };
-  const myPlotGender = container.querySelector('#myPlotGender');
-  Plotly.newPlot(myPlotGender, dataGender, layoutGender);//eslint-disable-line
+  Plotly.newPlot(myPlot, data, layout, config);//eslint-disable-line
 
   return container;
 };

@@ -13,20 +13,20 @@ export default () => {
 
   container.innerHTML = `
     <section class="container-about">
-        <h1>About Studio Ghibli</h1>
-        <hr>
-        <p>Studio Ghibli Inc. é um  estúdio de cinema de animação japonês com sede em Koganei, Tóquio. Amplamente
-        conhecido por seus seus filmes de animação, mas também é responsável por uma variedade de curtas, uma série
-        televisiva, comerciais de televisão, documentários e colaboração no desenvolvimento de vários jogos.
-        Fundado em 1985 por Isao Takahata e Hayao Miyazaki o Studio Ghibli é o responsável por um total de vinte e dois
-        longas-metragens. No Japão, seus filmes são populares por liderar as bilheterias assim que lançados.</p>
+      <h1>About Studio Ghibli</h1>
+      <hr>
+      <p>Studio Ghibli Inc. is a Japanese animation film studio based in Koganei, Tokyo. Widely known for his animated
+      films, he is also responsible for a variety of short subjects, television films and commercials, documentaries
+      and collaborated with videos game studios on the visual development of several games. Founded in 1985 by Isao
+      Takahata and Hayao Miyazaki, Studio Ghibli is responsible for a total of twenty-two feature films. In Japan,
+      his films are popular for topping the box office as soon as they are released and five are among the ten
+      highest-grossing anime feature films made in Japan.</p>
 
-        <p>Neste dashbord apresento um total de <strong id="count-films" class="counter"></strong> longas, nos quais
-        <strong id="count-people" class="counter"></strong> personagens dão forma a histórias fantásticas sobre o
-        cotidiano japonês ou reinos distantes, pilotam <strong id="count-vehicles" class="counter"></strong> veículos
-        singulares e transitam por <strong id="count-locations" class="counter"></strong> locais extraordinários.
-        </p>
-        <img src="../assets/characters.png" id="img-characters" alt="Imagem com os personagens do Studios Ghibli">
+      <p>In this dashboard I present a total of <strong id="count-films" class="counter"></strong> films, in which
+      <strong id="count-people" class="counter"></strong> characters give form to fantastic stories about the Japanese
+      daily life or distant kingdoms, pilot <strong id="count-vehicles" class="counter"></strong> unique vehicles and
+      transit through <strong id="count-locations" class="counter"></strong> extraordinary locations.</p>
+      <img src="../assets/characters.png" id="img-characters" alt="Imagem com os personagens do Studios Ghibli">
     </section>  
 `;
 

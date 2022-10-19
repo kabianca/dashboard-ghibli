@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-text);
+}
+#title-word-cloud {
+    margin-top: 5vh;
+    color: var(--btn-hover-background);
+    font: bold 1.5rem var(--font-text);
+}
+
+#description {
+    display: inline;
+}
+
+#right, #left {
+    margin-top: 3vh;
+    width: 32vw;
+    font-size: 1.5rem;
+    color: var(--color-font-hover);
+}
+
+#right {
+    float: right;
+    text-align: right;
+}
+
+#left {
+    float: left;
+    text-align: left;
+}
+
+#data {
+    font-size: 2rem;
+}

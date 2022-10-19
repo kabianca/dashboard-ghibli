@@ -64,7 +64,7 @@ export default () => {
         <p class="modal-director">Dirigido por ${film.director}</p>
         <p>Score: ${film.rt_score}</p><br>
         <p>${film.description}</p><br>
-        <p><strong>There is ${(film.people).length} characters!</strong></p>
+        <p><strong id="characters-number-modal">There is ${(film.people).length} characters!</strong></p>
         <button class="close">Sair</button>
       </div> 
      `;

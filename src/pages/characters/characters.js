@@ -74,6 +74,8 @@ export default () => {
     return arrayPeople.join('');
   }
 
+  cataloguePeople.innerHTML = printCataloguePeople(films);
+
   menuFilm.addEventListener('click', () => {
     cataloguePeople.innerHTML = printCataloguePeople(filterPeople(films, menuFilm.value));
   });
