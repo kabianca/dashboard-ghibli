@@ -76,11 +76,11 @@ export default () => {
 
   cataloguePeople.innerHTML = printCataloguePeople(films);
 
-  menuFilm.addEventListener('click', () => {
+  menuFilm.addEventListener('change', () => {
     cataloguePeople.innerHTML = printCataloguePeople(filterPeople(films, menuFilm.value));
   });
 
-  menuSpecie.addEventListener('click', () => {
+  menuSpecie.addEventListener('change', () => {
     const specieCharacters = filterSpecie(films, menuSpecie.value);
     cataloguePeople.innerHTML = printFilterSpecie(specieCharacters);
   });
