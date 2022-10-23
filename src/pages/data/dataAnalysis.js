@@ -10,26 +10,29 @@ export default () => {
       <hr>
     </section>
     <table class="columns">
-      <tr>
-        <td><p id="title-word-cloud">Character Gender Overview</p></td>
-        <td><p id="title-word-cloud">Species of the Ghibli Universe</p></td>
-      </tr>
-      <tr>
-        <td><div id="myPlotGender" style="width:100%;max-width:700px"></div></td>
-        <td><img src="../../assets/wordcloud.png" alt="Species of the Ghibli Universe" style="width:100%;max-width:700px"></td>
-      </tr>
+      <thead>
+        <tr>
+          <th id="title-word-cloud"><p>Character Gender Overview</p></td>
+          <th id="title-word-cloud"><p>Species of the Ghibli Universe</p></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p id="title-mobile">Character Gender Overview</p><div id="myPlotGender"></div></td>
+          <td><p id="title-mobile">Species of the Ghibli Universe</p><img id="word-cloud" src="../../assets/wordcloud.png" alt="Species of the Ghibli Universe"></td>
+        </tr>
+        <tr>
+          <td>Studio Ghibli produces approximately <strong id="data">1 movie every 2 years</strong>, with the exception of the years
+          1988 and 2013 responsible for the release of 2 movies each.</td>
+          <td><strong id="data">40% of the movies </strong> in the Ghibli Universe are populated mostly by characters of the human species. The other
+          species with greater numbers assume the main role in some production.</td>    
+        </tr>
+      </tbody>
     </table>
-    <div id="description">
-      <p id="left">Studio Ghibli produces approximately <strong id="data">1 movie every 2 years</strong>, with the exception of the years
-      1988 and 2013 responsible for the release of 2 movies each.</p>
-      <p id="right"><strong id="data">40% of the movies </strong> in the Ghibli Universe are populated mostly by characters of the human species. The other
-      species with greater numbers assume the main role in some production.</p>
-    </div>
     `;
 
   const { films } = ghibli;
 
-  // gênero dos personagens
   function listGender(obj) {
     const genderTotal = [];
     obj.map((film) => {
@@ -61,7 +64,9 @@ export default () => {
   }];
 
   const layout = {
-    // title: 'Character Gender Overview',
+    autosize: false,
+    width: 500,
+    height: 400,
     plot_bgcolor: '#272727',
     paper_bgcolor: '#272727',
     font: {
