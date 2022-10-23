@@ -4,33 +4,59 @@
     padding: 0;
     font-family: var(--font-text);
 }
-#title-word-cloud {
-    margin-top: 5vh;
+
+.columns {
+    width: 70vw;
+    margin-bottom: 20px;
+}
+
+.columns thead th {
+    vertical-align: bottom;
+    padding-top: 5vh;
     color: var(--btn-hover-background);
     font: bold 1.5rem var(--font-text);
 }
 
-#description {
-    display: inline;
+#word-cloud {
+    max-width: 35vw;
 }
 
-#right, #left {
+.columns tbody td {
     margin-top: 3vh;
-    width: 32vw;
+    padding: 2vh 2vw;
+    text-align: justify;
     font-size: 1.5rem;
     color: var(--color-font-hover);
 }
 
-#right {
-    float: right;
-    text-align: right;
+#title-mobile {
+    display:none;
 }
 
-#left {
-    float: left;
-    text-align: left;
+@media screen and (max-width: 815px) {
+    .columns thead {
+        display: none;
+    }
+
+    #title-mobile {
+        display: block;
+        padding-bottom: 3vh;
+        color: var(--btn-hover-background);
+        font: bold 1.5rem var(--font-text);
+    }
+
+    #word-cloud {
+        max-width: 70vw;
+    }
+
+    .columns td:not(first-child) {
+        display: block;
+    }
 }
 
-#data {
-    font-size: 2rem;
+@media screen and (max-width: 420px) {
+    .columns {
+        margin: auto;
+        width: 10vw;
+    }
 }

@@ -124,24 +124,6 @@
 }
 
 @media only screen and (max-width: 815px) {
-    .top h1 {
-        margin: -10vw 0 0;
-        font-size: 3.5vh;
-    }
-
-    .navbar {
-        padding: 6vw 0 2vw 50vw;
-    }
-
-    .navbar a {
-        font-size: 0.8rem;
-    }
-
-    .description {
-        font-size: 1rem;
-        padding: 0 0 1vw 25vw;
-    }
-
     .container {
         min-height: 130vw;
     }
@@ -150,8 +132,8 @@
         font-size: 0.8rem;
     }
 
-    .catalogue {
-        grid-template-columns: repeat(3, 1fr);
+    .catalogue-films {
+        height: 750px;
     }
 
     .btn-modal {
@@ -188,13 +170,22 @@
         min-height: 130vw;
     }
 
-    .btn-catalogue-filter {
-        font-size: 0.4rem;
+    .btn-catalogue {
+        margin: auto 0;
+        display: flex;
+        flex-direction: column;
     }
 
-    .catalogue {
+    .btn-catalogue-filter {
+        width: 150px;
+        height: 25px;
+        align-self: center;
+        font-size: 0.7rem;
+    }
+
+    .catalogue-films {
         grid-template-columns: repeat(2, 1fr);
-        margin: 2.2vw -2vw;
+        height: 430px;
     }
 
     .btn-modal {
