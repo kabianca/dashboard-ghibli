@@ -10,8 +10,7 @@
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" style="height: 30px;"/>
 </div>
 
-
-## **Índice**
+---
 
 * [1. Apresentação](#1-apresentação)
 * [2. Studio Ghibli](#2-studio-ghibli)
